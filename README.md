@@ -5,8 +5,8 @@
 
 저자는 YOLO를 제안하면서 3가지 장점을 설명했습니다.
 >1. complex pipeline에서 벗어나 **매우 빠른 detection 속도**를 구사합니다.
-2. image 전체를 이용해 학습하기 때문에 **image를 global하게 추론*합니다.
-3. **다양한 object의 representation에  generalize**되어 있어 새로운 domain이나 다양한 input에 대해 적용이 가능합니다.
+>2. image 전체를 이용해 학습하기 때문에 **image를 global하게 추론*합니다.
+>3. **다양한 object의 representation에  generalize**되어 있어 새로운 domain이나 다양한 input에 대해 적용이 가능합니다.
 
 YOLO의 특징에 대해 알아보았으니 Model Architecture 구조를 알아보겠습니다.
 
@@ -65,10 +65,10 @@ Loss Function은 **grid cell에 object가 포함하고 있는지 여부에 따�
 
 YOLO를 구현하는 전체적인 순서는 다음과 같습니다.
 >1. Modeling
-2. Loss Function
-3. Dataset
-4. Training
-5. Predict
+>2. Loss Function
+>3. Dataset
+>4. Training
+>5. Predict
 
 ### Modeling
 YOLO 모델은 24개의 Conv-layer와 2개의 FC-layer로 이루어져 있습니다. 코드로 구현한 Conv-layer는 BatchNormalization과 Leaky-ReLU를 적용한 Conv-Block을 먼저 구현한 뒤, 이 Block들을 Architecture에 맞게 쌓아주었습니다.
